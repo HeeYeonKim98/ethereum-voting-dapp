@@ -1,0 +1,12 @@
+const ethers = require('ethers');
+
+const a = ethers.utils.formatBytes32String('kim');
+const b = ethers.utils.formatBytes32String('hee');
+const c = ethers.utils.formatBytes32String('yeon');
+
+console.log(a, b, c);
+[
+  '0x6b696d0000000000000000000000000000000000000000000000000000000000',
+  '0x6865650000000000000000000000000000000000000000000000000000000000',
+  '0x79656f6e00000000000000000000000000000000000000000000000000000000',
+];

@@ -1,10 +1,11 @@
-pragma solidity <=^0.5.0;
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.6.0 <0.9.0;
 
 contract Voting {
     bytes32[] public candidateList; // 후보자 리스트
     mapping(bytes32 => uint8) public votesReceived; // 각 후보자 해시형 득표수 (kim -> 10)
-  
-    constructor(string candidateNames) public {
+
+    constructor(bytes32[] memory candidateNames) {
         candidateList = candidateNames;
     }
 
@@ -21,13 +22,13 @@ contract Voting {
         votesReceived[candidate] += 1;
     }
 
-    function totalVotesFor(bytes32 candidate) public view {
+    function totalVotesFor(bytes32 candidate) public view returns (uint8) {
         require(validCandidate(candidate));
         return votesReceived[candidate];
     }
 
-    function validCandidate(bytes32 candidate) public returns (bool) {
-        for (uint256 i = 0; i < candidateList.length(); i++) {
+    function validCandidate(bytes32 candidate) public view returns (bool) {
+        for (uint256 i = 0; i < candidateList.length; i++) {
             if (candidateList[i] == candidate) {
                 return true;
             }
