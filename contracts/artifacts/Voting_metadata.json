@@ -1,0 +1,150 @@
+{
+	"compiler": {
+		"version": "0.8.6+commit.11564f7e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32[]",
+						"name": "candidateNames",
+						"type": "bytes32[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "candidateList",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "candidate",
+						"type": "bytes32"
+					}
+				],
+				"name": "totalVotesFor",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "candidate",
+						"type": "bytes32"
+					}
+				],
+				"name": "validCandidate",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "candidate",
+						"type": "bytes32"
+					}
+				],
+				"name": "voteForCandidate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"name": "votesReceived",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"voteForCandidate(bytes32)": {
+					"notice": "function 총 3개 1. voteForCandidate : 특정 후보자에게 투표하면 득표수 + 1 되는 함수 2. totalVotesFor(읽기 전용) : 각 후보자의 전체 득표수 3. validCandidate(읽기 전용) : 후보자 리스트에 존재하는 후보자인지 유효성 검사"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/voting.sol": "Voting"
+		},
+		"evmVersion": "berlin",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/voting.sol": {
+			"keccak256": "0xa6df56932a63502f4ea7e1f0c9e9fb580860b73792d7ac6226c55f2455a781ca",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a5eabd488aa8b45388cc0b6e081dec25816d3eb6fb4a2b90b3323ba0547386b5",
+				"dweb:/ipfs/QmdoNZMmFPiCdmVw4BK6z5twXB8NRMGHWGkszf4JE2khXP"
+			]
+		}
+	},
+	"version": 1
+}
